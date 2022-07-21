@@ -4,7 +4,7 @@
     "license": "MIT",
     "scripts": {
         "build": "rm -rf dist/ && tsc",
-        "start": "node dist/server.js",
+        "start": "npm run build && node dist/server.js",
         "watch": "nodemon --watch './**/*.{ts}' src/server.ts",
         "dev": "tsc-watch --onSuccess \"npm run watch\""
     },
