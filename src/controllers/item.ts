@@ -31,6 +31,7 @@ const addItem = async (req: Request, res: Response, next: NextFunction) => {
 
     await itemAdded.save();
 
+    res.set('Access-Control-Allow-Origin', '*');
     res.status(200).send({ message: 'Item added' });
 };
 
