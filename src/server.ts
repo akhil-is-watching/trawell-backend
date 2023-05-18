@@ -31,7 +31,7 @@ const startServer = () => {
     /** MIDDLEWARE */
     router.use(express.urlencoded({ extended: true }));
     router.use(express.json());
-    router.use(cors());
+    router.use(cors({ origin: "*" }));
 
     /** ROUTES */
 
