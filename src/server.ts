@@ -31,7 +31,7 @@ const startServer = () => {
     /** MIDDLEWARE */
     router.use(express.urlencoded({ extended: true }));
     router.use(express.json());
-    router.use(cors({ origin: '*' , credentials :  true}));
+    router.use(cors({ origin: 'https://trawell-website-production.up.railway.app/'}));
 
     /** ROUTES */
 
