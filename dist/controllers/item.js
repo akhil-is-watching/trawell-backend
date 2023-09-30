@@ -27,6 +27,7 @@ const addItem = async (req, res, next) => {
         price: price
     });
     await itemAdded.save();
+    res.set('Access-Control-Allow-Origin', '*');
     res.status(200).send({ message: 'Item added' });
 };
 const itemPurchases = async (req, res, next) => {
